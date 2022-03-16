@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>Найти наибольшее счастливое число, счастливым является число если оно встречается стольго раз сколько число, Если нет, то 0.</h3>
+
+<p id="demo"></p>
+
+<script>
+let num = 11224233355666666;
+let text = num.toString();
+let arr = text.split('');
+
+let result = {};
+arr.forEach(function(a){
+    result[a] = result[a] + 1 || 1;
+});
+let MaxKey = 0;
+for (let key in result)
+if (result[key] == Number(key)) {
+	
+	MaxKey = Math.max(MaxKey,Number(key));
+    
+    //document.write('число ' + key + ' == ' + result[key] + ' раз(а) <br>');
+    }
+
+document.write(MaxKey);
+</script>
+
+</body>
+</html>
