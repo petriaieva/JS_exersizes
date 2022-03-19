@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3></h3>
+
+<p id="demo">Разобрать url строку и создать из нее объект JS</p>
+
+<script>
+const inData = 'user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue&experiments.theme=dark';
+
+function queryObjectify(str)
+{
+ let res = {};
+
+ str = str.split('&');
+ str = str.map(i => i.split('.'));
+ 
+ 
+ for (let i = 0; i < str.length; i++)
+ {
+ 	let obj = res;
+    
+ 	for (let j = 0; j < str[i].length; j++)
+    {
+    if (j == str[i].length-1) {
+    
+    let value = str[i][j].split("=");
+    obj[value[0]] = decodeURIComponent(value[1]);
+    break;
+    }
+   
+   if (obj[str[i][j]]) {obj = obj[str[i][j]]}
+   else {obj[str[i][j]] = {};
+   obj = obj[str[i][j]];}
+    
+    }
+    
+    
+    
+ }
+
+return res;
+};
+ let rez = queryObjectify(inData);
+ 
+ console.log(rez);
+ 
+
+
+
+</script>
+
+</body>
+</html>
