@@ -4,7 +4,7 @@
 
 <h2>JavaScript</h2>
 
-<h3>Найти наибольшее счастливое число, счастливым является число если оно встречается стольго раз сколько число, Если нет, то 0.</h3>
+<h3>Find the largest lucky number, a lucky number is if it occurs as many times as the number, if not, then 0.</h3>
 
 <p id="demo"></p>
 
