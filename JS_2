@@ -6,7 +6,7 @@
 
 <h3></h3>
 
-<p id="demo">Parse url string and create JS object from it</p>
+<p id="demo">Parse url string and create JS  object from it</p>
 
 <script>
 const inData = 'user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue&experiments.theme=dark';
